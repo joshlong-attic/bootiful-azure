@@ -18,8 +18,7 @@
 <!-- application.properties -->
 
 ##
-## Azure Service Bus
-## Spring Cloud Stream
+## Azure Service Bus && Spring Cloud Stream
 service-bus.connection-string=${AZURE_SERVICE_BUS_CONNECTION_STRING}
 spring.cloud.azure.servicebus.connection-string=${service-bus.connection-string}
 spring.cloud.stream.bindings.input.destination=messages-queue
