@@ -37,7 +37,6 @@ import java.util.concurrent.ConcurrentSkipListSet;
 @EnableBinding({Source.class, Sink.class})
 public class BootifulAzureApplication {
 
-
     public static void main(String[] args) {
         SpringApplication.run(BootifulAzureApplication.class, args);
     }
