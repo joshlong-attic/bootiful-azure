@@ -17,11 +17,13 @@ import org.springframework.core.io.Resource;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.http.MediaType;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.InputStream;
@@ -35,6 +37,7 @@ import java.util.concurrent.ConcurrentSkipListSet;
 @EnableBinding({Source.class, Sink.class})
 public class BootifulAzureApplication {
 
+
     public static void main(String[] args) {
         SpringApplication.run(BootifulAzureApplication.class, args);
     }
@@ -43,6 +46,7 @@ public class BootifulAzureApplication {
 
 @Log4j2
 @RestController
+@RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 @RequiredArgsConstructor
 class SpringCloudStreamServiceBusDemo {
 
@@ -84,6 +88,7 @@ class Customer {
 @Log4j2
 @RequiredArgsConstructor
 @RestController
+@RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 class SqlServerDemoRestController {
 
     private final JdbcTemplate jdbc;
@@ -96,6 +101,7 @@ class SqlServerDemoRestController {
 }
 
 @Log4j2
+@RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 @RestController
 @RequiredArgsConstructor
 class CosmosDbDemoRestController {
@@ -142,7 +148,7 @@ class ObjectStorageServiceDemo {
         InputStream inputStream = catJpg.getInputStream();
         byte[] bytes = FileCopyUtils.copyToByteArray(inputStream);
         BlockBlobUploadResponse uploadResponse = containerURL
-                .createBlockBlobURL( "azure-cat.jpg")
+                .createBlockBlobURL("azure-cat.jpg")
                 .upload(Flowable.just(ByteBuffer.wrap(bytes)), bytes.length, null, null, null, null)
                 .blockingGet();
         log.info("uploaded: " + uploadResponse.toString());
