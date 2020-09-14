@@ -1,3 +1,15 @@
 # Bootiful Azure 
 
-Join me, Spring Developer Advocate [Josh Long (@starbuxman)](http://twitter.com/starbuxman), for this packed look at taking your applications to productions with ease. In this talk we'll look at some of the amazing opportunities that await Spring and Microsoft Azure users. We'll begin our journey by looking at Azure Spring Cloud, the platform-as-a-service offering jointly developed and delivered by Microsoft and VMWare and built upon Azure Kubernetes. If you were looking for an easy, turn-key mechanism to get Spring-based applications up-and-running on Azure, then this the way to go. Then, we'll introduce Spring Cloud for Azure, the Spring Boot- and Spring Cloud-ready integrations and APIs that make connecting your applications with Azure-managed infrastructure an absolute breeze. 
+
+* welcome folks thanks for coming sit down lets get to it 
+* we don't have a ton of time 
+* I wish we did to ponder this that and everything but we simply dont
+* 20 minutes isnt enough time to make a baked Alaska (or some other famously quick thing - todo google food recipes)
+* but it IS enough time to introduce the Spring and Azure technologies and the opportunities that they provide us and see those technologies deployed to production (something like that) 
+* SQL server is one of the most powerful databases in the world; tons of features and -best of all - Microsoft will run it for you 
+* support s reactive variant as well 
+* now of course you could run your own SQ server the Real power comes in something like cosmosdb 
+* bytes are data too! Azure objet storage is awesome 
+* and of course sometimes I wanna tell other folks in the system about my data. This is what messaging is for. Martin fowler wrote a nice blog introducing four types of messaging 
+* and now that weve got a singing dancing Spring app in less than 160 lines of code, lets get this thing to production! 
+* Azure portal and go! 
