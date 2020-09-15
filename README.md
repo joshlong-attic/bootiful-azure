@@ -16,6 +16,12 @@
 * Azure portal and go! 
 
 <!-- application.properties -->
+<dependency>
+    <groupId>com.microsoft.azure</groupId>
+    <artifactId>spring-cloud-azure-servicebus-queue-stream-binder</artifactId>
+    <version>1.2.5</version>
+</dependency>
+
 
 ##
 ## Azure Service Bus && Spring Cloud Stream
